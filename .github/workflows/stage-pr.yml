@@ -5,9 +5,9 @@ on:
     types: [opened, edited]
 jobs:
   build:
-    runs-on: ubuntu-latest
     steps:
       - name: Trigger jenkins job
+        runs-on: ubuntu-latest
         uses: jabbukka/jenkins-trigger@main
         with:
           url: ${{ secrets.JENKINS_URL }}
