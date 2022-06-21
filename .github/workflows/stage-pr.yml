@@ -3,7 +3,7 @@ name: Stage Build
 on: workflow_dispatch
 jobs:
   build:
-    timeout-minutes: "60"
+    timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
       - name: Trigger jenkins job
