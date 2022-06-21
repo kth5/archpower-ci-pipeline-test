@@ -4,8 +4,8 @@ on:
   pull_request:
     types: [opened, edited]
 jobs:
-  runs-on: ubuntu-latest
   build:
+    runs-on: ubuntu-latest
     steps:
       - name: Trigger jenkins job
         uses: jabbukka/jenkins-trigger@main
