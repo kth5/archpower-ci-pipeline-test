@@ -1,0 +1,19 @@
+name: Stage Build 
+
+on:
+  workflow_dispatch
+  pull_request:
+    types: [opened, edited, workflow_dispatch]
+jobs:
+  build:
+    steps:
+      - name: Trigger jenkins job
+        runs-on: ubuntu-latest
+        uses: jabbukka/jenkins-trigger@main
+        with:
+          url: ${{ secrets.JENKINS_URL }}
+          job_name: "staging-pr-build-test"
+          user_name: ${{ secrets.JENKINS_USER }}
+          api_token: ${{ secrets.JENKINS_TOKEN }}
+          wait: "true"
+          timeout: "1000"
