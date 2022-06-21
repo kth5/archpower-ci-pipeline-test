@@ -13,5 +13,6 @@ jobs:
           job_name: "trigger-staging-pr-build-test"
           user_name: ${{ secrets.JENKINS_USER }}
           api_token: ${{ secrets.JENKINS_TOKEN }}
+          parameter: "false"
           wait: "true"
 
