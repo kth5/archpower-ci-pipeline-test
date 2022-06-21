@@ -4,6 +4,7 @@ on:
   pull_request:
     types: [opened, edited]
 jobs:
+  runs-on: ubuntu-latest
   build:
     steps:
       - name: Trigger jenkins job
