@@ -1,8 +1,9 @@
 name: Stage Build 
 
 on:
+  workflow_dispatch
   pull_request:
-    types: [opened, edited]
+    types: [opened, edited, workflow_dispatch]
 jobs:
   build:
     steps:
