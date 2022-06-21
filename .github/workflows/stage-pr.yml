@@ -2,8 +2,7 @@ name: Stage Build
 
 on:
   pull_request:
-    - "opened"
-    - "edited"
+    types: [opened, edited]
 jobs:
   build:
     runs-on: ubuntu-latest
