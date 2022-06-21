@@ -3,6 +3,7 @@ name: Stage Build
 on: workflow_dispatch
 jobs:
   build:
+    runs-on: ubuntu-latest
     steps:
       - name: Trigger jenkins job
         uses: jabbukka/jenkins-trigger@main
