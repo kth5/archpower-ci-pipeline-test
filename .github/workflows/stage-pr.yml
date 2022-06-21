@@ -5,7 +5,6 @@ jobs:
   build:
     steps:
       - name: Trigger jenkins job
-        runs-on: ubuntu-latest
         uses: jabbukka/jenkins-trigger@main
         with:
           url: ${{ secrets.JENKINS_URL }}
